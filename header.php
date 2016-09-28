@@ -17,12 +17,16 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 	
+	<link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
+
 	<?php wp_head();?>
 </head>
 
 <body>
-	<header class="container">
-		<img src="<?php bloginfo('template_directory');?>/images/logo.png" style="width: 100%"/>
+	<header>
+	<div  class="container">
+		<img src="<?php bloginfo('template_directory');?>/images/logo-tranparent.png" style="width: 100%"/>
+		</div>
 	</header>
 	<div class="navbar navbar-default">
 		<div class="container">
@@ -31,18 +35,35 @@
 					<a href="#">Home</a>
 				</li> 
 				<li>
-					<a href="#">Link</a>
-				</li> 
+					<a href="#">Contact</a>
+				</li>
 				<li>
-					<a href="#">Link</a>
+					<a href="#">Categorien</a>
+				</li>  
+				<li>
+					<a href="#">Over mij</a>
 				</li> 
 			</ul> 
 		</div>
 	</div>
+
+	<style>
+	html, body{
+		padding: 0;
+		margin-top: 0 !important;
+	}
+	header{
+		background: #FFF9FA;
+		padding:20px;
+	}
+		.navbar.navbar-default{
+			background: #FFF9FA;
+			background-image: none;
+			border: none;
+			/*border-top: solid 1px #cccccc;*/
+			border-bottom: solid 1px #cccccc;
+			box-shadow: none;
+		}
+	</style>
 	
 	<div class="container">
-
-<div class="blog-header">
-	<h1 class="blog-title"><a href="<?php bloginfo('wpurl');?>"><?php echo get_bloginfo( 'name' ); ?></a></h1>
-	<p class="lead blog-description"><?php echo get_bloginfo( 'description' ); ?></p>
-</div>

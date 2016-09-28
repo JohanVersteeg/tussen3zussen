@@ -1,23 +1,28 @@
-<div class="col-sm-3 col-sm-offset-1 blog-sidebar">
-	<div class="sidebar-module sidebar-module-inset">
+<div class="col-sm-3">
+	<div>
 		<h4>About</h4>
 		<p><?php the_author_meta( 'description' ); ?> </p>
 	</div>
-	<div class="sidebar-module">
+	<div>
 		<h4>Tags</h4>
-		<ol class="list-unstyled">
-			<?php wp_get_cats(); ?>
+		<ol>
+			<?php
+				$categories =  get_categories();
+				foreach($categories as $category){
+					echo $category->name;
+				} 
+			?>
 		</ol>
 	</div>
-	<div class="sidebar-module">
+	<div>
 		<h4>Archives</h4>
-		<ol class="list-unstyled">
+		<ol>
 			<?php wp_get_archives('type=monthly'); ?>
 		</ol>
 	</div>
-	<div class="sidebar-module">
+	<div>
 		<h4>Elsewhere</h4>
-		<ol class="list-unstyled">
+		<ol>
 			<li><a href="#">GitHub</a></li>
 			<li><a href="#">Twitter</a></li>
 			<li><a href="#">Facebook</a></li>
