@@ -1,4 +1,4 @@
-<div class="col-sm-6" style="float: left;">
+<div class="col-sm-6">
     <div class="blog-post">
         <div class="card-thumbnail">
             <?php echo get_the_post_thumbnail(null); ?>  

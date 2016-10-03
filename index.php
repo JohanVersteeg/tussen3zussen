@@ -1,4 +1,8 @@
-<?php get_header(); ?>
+<?php 
+	get_header(); 
+	$isItemPage = is_page() || is_single();
+?>
+<div class="<?php echo ($isItemPage ? "single-item-page" : "multiple-items-page") ?>">
 	<div class="row">
 		<div class="col-sm-9">
 			<?php 
@@ -19,4 +23,5 @@
 		</div>
 		<?php get_sidebar(); ?>
 	</div> 
+</div>
 <?php get_footer(); ?>
