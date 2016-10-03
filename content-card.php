@@ -6,7 +6,7 @@
         <div class="card-information">
             <h2 class="title"><?php the_title(); ?></h2>
             <p class="date"><?php the_date(); ?></p>
-<hr />
+            <hr />
             <div class="text"> 
             <?php the_content(null, true); ?> 
             </div>
@@ -16,16 +16,20 @@
 </div>
 <style>
     .blog-post{
-        /*background: #fbfbfb;*/
+        
         padding: 0px;
-        border: dashed 1px #cccccc;
+        border: solid 2px #f4f4f4;
         padding: 10px;
         /*-webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.25);
         -moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.25);
         box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.25);*/
-        margin-bottom: 20px;
-        font-family: 'Dosis', sans-serif;
+        margin-bottom: 20px;    
         cursor: pointer;
+        background-color: white;
+    }
+
+    .col-sm-9 {
+        padding:0;
     }
 .blog-post .card-thumbnail{
     background: #FFEAF1;
@@ -57,7 +61,7 @@
     }
 
     .blog-post .card-information hr{
-        border-top: dashed 1px #cccccc;
+        border-top: solid 2px #f4f4f4;
     }
     
     .blog-post .card-information .text > * {

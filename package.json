@@ -1,0 +1,23 @@
+{
+  "name": "girlonthewhitebike-wordpress-theme",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://jversteeg@bitbucket.org/jversteeg/girlonthewhitebike-wordpress-theme.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/jversteeg/girlonthewhitebike-wordpress-theme#readme",
+  "dependencies": {
+    "bootstrap-less": "^3.3.8",
+    "grunt": "^1.0.1",
+    "grunt-cli": "^1.2.0",
+    "grunt-contrib-less": "^1.4.0",
+    "grunt-contrib-watch": "^1.0.0"
+  }
+}

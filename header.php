@@ -16,10 +16,26 @@
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
-	
+	<script   src="http://code.jquery.com/jquery-3.1.1.js"   integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="   crossorigin="anonymous"></script>
 	<link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
 
 	<?php wp_head();?>
+
+	<script>
+	$(function() {
+		$(window).scroll(checkScrollPosition);
+		checkScrollPosition();
+	});
+
+function checkScrollPosition(){
+		if ($(window).scrollTop() > $("header").outerHeight()) {
+			$("body").addClass("fixed-menu");
+		} else {
+			$("body").removeClass("fixed-menu");
+		}
+}
+	</script>
 </head>
 
 <body>
@@ -30,39 +46,86 @@
 	</header>
 	<div class="navbar navbar-default">
 		<div class="container">
-			<ul class="nav navbar-nav"> 
-				<li class="active">
-					<a href="#">Home</a>
-				</li> 
+			<ul class="nav navbar-nav">
 				<li>
-					<a href="#">Contact</a>
+					<a href="/">Home</a>
 				</li>
-				<li>
-					<a href="#">Categorien</a>
-				</li>  
-				<li>
-					<a href="#">Over mij</a>
-				</li> 
+				<?php foreach(get_pages() as $page){ ?> 
+				<li <?php if (is_page($page->ID)) echo 'class="active"'; ?>>
+					<a 
+						href="<?php echo get_page_link($page->ID); ?>"						
+						>
+						<?php echo $page->post_title ?></a>
+				</li>
+				<?php } ?>
 			</ul> 
 		</div>
 	</div>
 
-	<style>
+	<style>	
 	html, body{
 		padding: 0;
 		margin-top: 0 !important;
+		font-family: 'Dosis', sans-serif;
+		background: url("<?php bloginfo('template_directory');?>/images/background.png")
 	}
+
+	body.fixed-menu .navbar.navbar-default{
+		position: fixed;
+		top: 0;
+		left:0;
+		right:0;	
+		z-index: 99999;
+	}
+
+body.fixed-menu{
+	padding-top: 70px;
+}
 	header{
 		background: #FFF9FA;
 		padding:20px;
 	}
+
+
+
+	header img{
+		padding: 0 60px;
+	}
 		.navbar.navbar-default{
-			background: #FFF9FA;
+			background: #ffe7eb;
 			background-image: none;
 			border: none;
-			/*border-top: solid 1px #cccccc;*/
-			border-bottom: solid 1px #cccccc;
+			letter-spacing: 1px;
+			/*border-top: solid 1px #cccccc;
+			border-bottom: solid 2px #f4f4f4;*/
 			box-shadow: none;
+			font-weight: bold;
+			  text-align: center;
+			  border-radius: 0;
+			-webkit-box-shadow: 0 2px 6px 0 rgba(0,0,0,0.2);
+			-moz-box-shadow: 0 2px 6px 0 rgba(0,0,0,0.2);
+			box-shadow: 0 2px 6px 0 rgba(0,0,0,0.2);
+		}
+
+			.navbar.navbar-default .nav.navbar-nav{
+				display: inline-block;
+				float: none;
+				vertical-align: top;
+				margin: 5px 0;
+			}
+
+			.navbar.navbar-default .nav.navbar-nav a{
+				padding: 10px 25px;
+			}
+
+		.navbar.navbar-default .active a{
+			background: #fdd4db;
+			box-shadow: none;
+		}
+
+		.navbar.navbar-default .active a:hover{
+			background: #fdd4db;
+			font-weight: bold;
 		}
 	</style>
 	
