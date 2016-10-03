@@ -6,13 +6,14 @@ module.exports = function (grunt) {
             tasks: ['less']
         },
         less: {
+            "development": {
                 options: {
 
                 },
                 files: {
                     'styles/theme.css': 'styles/theme.less'
                 }
-            
+            }
             /*production: {
                 options: {
                     paths: ['assets/css'],
@@ -32,9 +33,9 @@ module.exports = function (grunt) {
         }
     });
     grunt.loadNpmTasks('grunt-contrib-watch');
+    grunt.loadNpmTasks('grunt-contrib-less');
 
-  grunt.registerTask('less', ['less']);
-
+    //grunt.registerTask('less', ['less']);
     grunt.registerTask('default', ['less']);
 
 };

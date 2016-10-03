@@ -1,0 +1,55 @@
+.instagram-photos {
+    background: #ffe7eb;
+    padding: 10px 0px;
+    -webkit-box-shadow: 0 -1px 6px -6px rgba(0,0,0,0.1);
+    -moz-box-shadow: 0 -1px 6px -6px rgba(0,0,0,0.1);
+    box-shadow: 0 -1px 6px 0 rgba(0,0,0,0.1);
+
+    .row {
+        padding: 10px 60px;
+        border-top: 10px dotted white;
+        border-bottom: 10px dotted white;
+        margin:0;
+        position: relative;    
+    }
+
+    .col-sm-2 {
+        padding-left: 3px;
+        padding-right: 3px;
+    }
+    
+    img{   
+        width: 100%;
+    }
+
+    .title {
+        display: block;
+        position: absolute;
+        top:10px;
+        width: 40px;
+        bottom:20px;
+        background: url("../images/instagram/logo.png");
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        
+        &.left{
+            left: 10px;
+        }
+
+        &.right{
+            right: 10px;    
+        }
+    }
+
+    .shadow {
+        position: absolute;
+        height: 100%;
+        -webkit-box-shadow: inset 0px 0px 70px 0px rgba(0, 0, 0, 0.15);
+        -moz-box-shadow: inset 0px 0px 70px 0px rgba(0, 0, 0, 0.15);
+        box-shadow: inset 0px 0px 70px 0px rgba(0, 0, 0, 0.15);
+        top: 0;
+        right: 3px;
+        left: 3px;
+    }
+}

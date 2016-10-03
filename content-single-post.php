@@ -7,13 +7,5 @@
 </div><!-- /.blog-post -->
 
 	<style>
-		.col-sm-9{
-			border: solid 2px #f4f4f4;
-			margin-bottom: 10px;
-			background: white;
-		}
 
-		p{
-			text-align: left !important;
-		}
 	</style>

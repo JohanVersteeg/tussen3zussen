@@ -7,8 +7,10 @@
 
 	<title><?php echo get_bloginfo( 'name' ); ?></title>
 	
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+	<!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">-->
+
+	<link rel="stylesheet" href="<?php bloginfo('template_directory');?>/styles/theme.css" />
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 	
 	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -61,72 +63,5 @@ function checkScrollPosition(){
 			</ul> 
 		</div>
 	</div>
-
-	<style>	
-	html, body{
-		padding: 0;
-		margin-top: 0 !important;
-		font-family: 'Dosis', sans-serif;
-		background: url("<?php bloginfo('template_directory');?>/images/background.png")
-	}
-
-	body.fixed-menu .navbar.navbar-default{
-		position: fixed;
-		top: 0;
-		left:0;
-		right:0;	
-		z-index: 99999;
-	}
-
-body.fixed-menu{
-	padding-top: 70px;
-}
-	header{
-		background: #FFF9FA;
-		padding:20px;
-	}
-
-
-
-	header img{
-		padding: 0 60px;
-	}
-		.navbar.navbar-default{
-			background: #ffe7eb;
-			background-image: none;
-			border: none;
-			letter-spacing: 1px;
-			/*border-top: solid 1px #cccccc;
-			border-bottom: solid 2px #f4f4f4;*/
-			box-shadow: none;
-			font-weight: bold;
-			  text-align: center;
-			  border-radius: 0;
-			-webkit-box-shadow: 0 2px 6px 0 rgba(0,0,0,0.2);
-			-moz-box-shadow: 0 2px 6px 0 rgba(0,0,0,0.2);
-			box-shadow: 0 2px 6px 0 rgba(0,0,0,0.2);
-		}
-
-			.navbar.navbar-default .nav.navbar-nav{
-				display: inline-block;
-				float: none;
-				vertical-align: top;
-				margin: 5px 0;
-			}
-
-			.navbar.navbar-default .nav.navbar-nav a{
-				padding: 10px 25px;
-			}
-
-		.navbar.navbar-default .active a{
-			background: #fdd4db;
-			box-shadow: none;
-		}
-
-		.navbar.navbar-default .active a:hover{
-			background: #fdd4db;
-			font-weight: bold;
-		}
-	</style>
 	
 	<div class="container">
