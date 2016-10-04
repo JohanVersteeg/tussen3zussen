@@ -6533,7 +6533,6 @@ html,
 body {
   padding: 0;
   font-family: 'Dosis', sans-serif;
-  background: url("../images/background.png");
 }
 html.html {
   margin-top: 0px !important;
@@ -6549,14 +6548,13 @@ body.fixed-menu .navbar.navbar-default {
   z-index: 99999;
 }
 header {
-  background: #FFF9FA;
   padding: 20px;
 }
 header img {
   padding: 0 60px;
 }
 .navbar.navbar-default {
-  background: #ffe7eb;
+  background: white;
   background-image: none;
   border: none;
   letter-spacing: 1px;
@@ -6564,11 +6562,12 @@ header img {
   font-weight: bold;
   text-align: center;
   border-radius: 0;
-  -webkit-box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.2);
-  -moz-box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.2);
-  box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0 0px 4px 0 rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 0px 4px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0px 4px 0 rgba(0, 0, 0, 0.2);
 }
 .navbar.navbar-default .nav.navbar-nav {
+  display: inline-block;
   float: none !important;
   vertical-align: top;
   margin: 5px 0;
@@ -6651,6 +6650,7 @@ header img {
   margin-bottom: 20px;
   cursor: pointer;
   background-color: white;
+  transition: transform 0.2s ease-in-out;
 }
 .multiple-items-page .blog-post:hover {
   transform: scale(1.01);
@@ -6686,7 +6686,7 @@ header img {
   display: none;
 }
 .instagram-photos {
-  background: #ffe7eb;
+  background: white;
   padding: 10px 0px;
   -webkit-box-shadow: 0 -1px 6px -6px rgba(0, 0, 0, 0.1);
   -moz-box-shadow: 0 -1px 6px -6px rgba(0, 0, 0, 0.1);
@@ -6694,8 +6694,8 @@ header img {
 }
 .instagram-photos .row {
   padding: 10px 60px;
-  border-top: 10px dotted white;
-  border-bottom: 10px dotted white;
+  border-top: 10px dotted #e4e4e4;
+  border-bottom: 10px dotted #e4e4e4;
   margin: 0;
   position: relative;
 }
@@ -6716,6 +6716,7 @@ header img {
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
+  filter: invert(20%);
 }
 .instagram-photos .title.left {
   left: 10px;
@@ -6726,10 +6727,10 @@ header img {
 .instagram-photos .shadow {
   position: absolute;
   height: 100%;
-  -webkit-box-shadow: inset 0px 0px 70px 0px rgba(0, 0, 0, 0.15);
-  -moz-box-shadow: inset 0px 0px 70px 0px rgba(0, 0, 0, 0.15);
-  box-shadow: inset 0px 0px 70px 0px rgba(0, 0, 0, 0.15);
   top: 0;
   right: 3px;
   left: 3px;
+  -webkit-box-shadow: inset 0px 0px 70px 0px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: inset 0px 0px 70px 0px rgba(0, 0, 0, 0.15);
+  box-shadow: inset 0px 0px 70px 0px rgba(0, 0, 0, 0.15);
 }

@@ -1,7 +1,10 @@
 html, body{
 	padding: 0;
 	font-family: 'Dosis', sans-serif;
-	background: url("../images/background.png");
+
+	& when (@background-texture = true) {
+		background: url("../images/background.png");
+	}
 }
 
 html.html {

@@ -13,6 +13,7 @@
 			<i class="twitter fa fa-twitter" aria-hidden="true"></i>
 		</div>
 	</div>
+	<!--
 	<div class="sidebar-item">
 		<h4>Tags</h4>
 		<ol>
@@ -24,4 +25,5 @@
 			?>
 		</ol>
 	</div>
+	-->
 </div><!-- /.blog-sidebar -->

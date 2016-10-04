@@ -11,7 +11,10 @@ body.fixed-menu {
 }
 
 header {
-	background: #FFF9FA;
+	& when (@pink-theme = true) {
+		background: #FFF9FA;
+	}
+
 	padding:20px;
 
 	img {
@@ -20,7 +23,11 @@ header {
 }
 
 .navbar.navbar-default{
-	background: #ffe7eb;
+	background: white;
+	& when (@pink-theme = true) {
+		background: #ffe7eb;
+	}
+	
 	background-image: none;
 	border: none;
 	letter-spacing: 1px;
@@ -28,11 +35,17 @@ header {
 	font-weight: bold;
 	text-align: center;
 	border-radius: 0;
-	-webkit-box-shadow: 0 2px 6px 0 rgba(0,0,0,0.2);
-	-moz-box-shadow: 0 2px 6px 0 rgba(0,0,0,0.2);
-	box-shadow: 0 2px 6px 0 rgba(0,0,0,0.2);
+	-webkit-box-shadow: 0 0px 4px 0 rgba(0,0,0,0.2);
+	-moz-box-shadow: 0 0px 4px 0 rgba(0,0,0,0.2);
+	box-shadow: 0 0px 4px 0 rgba(0,0,0,0.2);
+	& when (@pink-theme = true) {
+		-webkit-box-shadow: 0 2px 6px 0 rgba(0,0,0,0.2);
+		-moz-box-shadow: 0 2px 6px 0 rgba(0,0,0,0.2);
+		box-shadow: 0 2px 6px 0 rgba(0,0,0,0.2);
+	}
 	
-	.nav.navbar-nav {					 
+	.nav.navbar-nav {		
+		display: inline-block;			 
 		float: none !important;
 		vertical-align: top;
 		margin: 5px 0;
