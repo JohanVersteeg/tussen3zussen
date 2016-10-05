@@ -46,7 +46,7 @@
             filter: invert(20%);
         }
         
-        &.left{
+        &.left{ 
             left: 10px;
         }
 
@@ -63,6 +63,37 @@
         left: 3px;        
         -webkit-box-shadow: inset 0px 0px 70px 0px rgba(0, 0, 0, 0.15);
         -moz-box-shadow: inset 0px 0px 70px 0px rgba(0, 0, 0, 0.15);
-        box-shadow: inset 0px 0px 70px 0px rgba(0, 0, 0, 0.15);        
+        box-shadow: inset 0px 0px 70px 0px rgba(0, 0, 0, 0.15);
+        cursor: pointer;
+        text-align:center;
+        vertical-align: middle;
+
+        .media-information{
+            display: none;
+            color: white;
+            text-align:center;
+            margin-top: 50%;
+            position: relative;
+            top:-10px;
+            font-size: 20px;
+
+            .likes {
+                margin-right: 30px;
+            }
+
+            .comments, .likes{
+                font-weight: bold;
+            }
+
+            .fa {
+                margin-right: 7px;
+            }
+        }
+        &:hover {
+            background: rgba(0,0,0,.3);
+            .media-information{
+                display: block;
+            }
+        }        
     }
 }

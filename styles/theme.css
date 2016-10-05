@@ -6533,20 +6533,22 @@ html,
 body {
   padding: 0;
   font-family: 'Dosis', sans-serif;
+  background: url("../images/background.png");
 }
 html.html {
   margin-top: 0px !important;
 }
-body.fixed-menu {
-  padding-top: 70px;
-}
-body.fixed-menu .navbar.navbar-default {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 99999;
-}
+/*body.fixed-menu {
+	padding-top: 70px;
+
+	.navbar.navbar-default{
+		position: fixed;
+		top: 0;
+		left:0;
+		right:0;	
+		z-index: 99999;
+	}	
+}*/
 header {
   padding: 20px;
 }
@@ -6733,4 +6735,32 @@ header img {
   -webkit-box-shadow: inset 0px 0px 70px 0px rgba(0, 0, 0, 0.15);
   -moz-box-shadow: inset 0px 0px 70px 0px rgba(0, 0, 0, 0.15);
   box-shadow: inset 0px 0px 70px 0px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  text-align: center;
+  vertical-align: middle;
+}
+.instagram-photos .shadow .media-information {
+  display: none;
+  color: white;
+  text-align: center;
+  margin-top: 50%;
+  position: relative;
+  top: -10px;
+  font-size: 20px;
+}
+.instagram-photos .shadow .media-information .likes {
+  margin-right: 30px;
+}
+.instagram-photos .shadow .media-information .comments,
+.instagram-photos .shadow .media-information .likes {
+  font-weight: bold;
+}
+.instagram-photos .shadow .media-information .fa {
+  margin-right: 7px;
+}
+.instagram-photos .shadow:hover {
+  background: rgba(0, 0, 0, 0.3);
+}
+.instagram-photos .shadow:hover .media-information {
+  display: block;
 }
