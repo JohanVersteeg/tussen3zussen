@@ -9,15 +9,17 @@
         border: solid 2px #f4f4f4;
         padding: 10px;
         margin-bottom: 20px;    
-        cursor: pointer;
         background-color: white;
-        transition: transform 0.2s ease-in-out;
 
-        &:hover{
-            transform: scale(1.01);
+        .read-more-placeholder:hover {
+            cursor: pointer;
 
             .card-information .title {
                 text-decoration: underline;
+            }
+
+            .lees-meer{
+                opacity: 1;
             }
         }
 
@@ -27,7 +29,7 @@
         }
 
         .card-information{
-            padding:5px;
+            padding:5px 5px 0 5px;
             font-size:15px;
             
             .title {
@@ -46,11 +48,26 @@
             }
             
             .text > * {
-                text-align:left !important;
+                text-align:justify !important;
             }
             .text img, .text .separator{
                 display:none;
             }
+        }
+
+        .lees-meer {
+            opacity: 0.8;
+            margin-top:10px;
+            margin-bottom: -10px;
+            text-align: center;
+            
+            img{
+                height:50px;
+            }
+        }
+
+        .social-media{
+            margin-top: -10px;
         }
     }
 }

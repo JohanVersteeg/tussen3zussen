@@ -41,9 +41,14 @@
         background-size: contain;
         background-position: center;
         background-repeat: no-repeat;
+        cursor: pointer;
 
         & when (@pink-theme = false) {
             filter: invert(20%);
+        }
+
+        &:hover{
+            filter: invert(30%);
         }
         
         &.left{ 
@@ -75,11 +80,19 @@
             margin-top: 50%;
             position: relative;
             top:-10px;
-            font-size: 20px;
 
             .likes {
-                margin-right: 30px;
+                margin-right: 10px;
+                @media (min-width: @screen-md-min) {
+                    margin-right: 30px;
+                }
             }
+
+            font-size: 12px;
+            @media (min-width: @screen-md-min) {
+                font-size: 20px;
+            }
+
 
             .comments, .likes{
                 font-weight: bold;
@@ -95,5 +108,16 @@
                 display: block;
             }
         }        
+    }
+
+    .photo-0, .photo-1, .photo-2{
+        margin-bottom: 6px;
+    }
+
+    @media (min-width: @screen-sm-min) {
+          
+        .photo-0, .photo-1, .photo-2{
+            margin-bottom: 0px;
+        }    
     }
 }

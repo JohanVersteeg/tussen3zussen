@@ -1,0 +1,38 @@
+.commentlist {
+    list-style: none;
+    margin: 0;
+    margin-left: 15px;
+    border-left: 2px solid @gray-lighter;
+    padding: 0;
+
+    .comment-body {
+        border: solid 1px @gray-lighter;
+        margin-left: 10px;
+        margin-bottom: 10px;
+        padding: 10px;
+        -webkit-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+        -moz-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+        box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+    }
+
+    .comment-author.vcard {
+        margin-top:-11px;
+
+        img{
+            border-radius: 50%;
+            padding: 3px;
+            border: solid 2px @gray-lighter;
+            margin-left:-47px;
+            margin-top:0px;
+            background: white;
+            width: 50px;
+            height: 50px;
+            -webkit-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+            -moz-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+        }
+    }
+    .bypostauthor .comment-body {
+        background: #fff4f6;
+    }
+}
