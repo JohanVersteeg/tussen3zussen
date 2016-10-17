@@ -6653,13 +6653,32 @@ header img {
 .single-item-page p {
   text-align: justify !important;
 }
+.single-item-page .MsoNormal {
+  text-align: justify !important;
+}
 .single-item-page .blog-post img {
   max-width: 100%;
   height: auto;
   margin: 6px 0;
 }
-.multiple-items-page .col-sm-9 {
-  padding: 0;
+@media only screen and (min-width: 768px) {
+  .multiple-items-page.first-post-big .left .odd {
+    display: none;
+  }
+  .multiple-items-page.first-post-big .right .even {
+    display: none;
+  }
+  .multiple-items-page.first-post-not-big .left .even {
+    display: none;
+  }
+  .multiple-items-page.first-post-not-big .right .odd {
+    display: none;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .multiple-items-page .right {
+    display: none;
+  }
 }
 .multiple-items-page .blog-post {
   padding: 0px;
