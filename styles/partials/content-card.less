@@ -1,7 +1,42 @@
-.multiple-items-page{
+.multiple-items-page {
 
+    @media only screen and (min-width : 768px) {
+        &.first-post-big {
+            .left {
+                .odd{
+                    display: none;
+                }
+            }
+
+            .right{
+                .even {
+                    display: none;
+                }
+            }
+        }
+
+        &.first-post-not-big {
+            .left {
+                .even{
+                    display: none;
+                }
+            }
+
+            .right{
+                .odd {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    @media only screen and (max-width : 768px) {
+        .right {
+            display: none;
+        }
+    }
     .col-sm-9 {
-        padding:0;
+        //padding:0;
     }
 
     .blog-post {       
@@ -13,7 +48,7 @@
 
         .read-more-placeholder:hover {
             cursor: pointer;
-
+ 
             .card-information .title {
                 text-decoration: underline;
             }

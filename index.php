@@ -2,11 +2,23 @@
 	get_header(); 
 	$isItemPage = is_page() || is_single();
 ?>
-<div class="<?php echo ($isItemPage ? "single-item-page" : "multiple-items-page") ?>">
+<div class="multiple-items-page <?php if(isFirstPage()) echo "first-post-big"; else echo "first-post-not-big"; ?>">
 	<div class="row">
 		<div class="col-sm-9">
 			<?php 
-				showListWithPosts();
+				if(!have_posts()){
+					echo "<center>Geen items gevonden</center>";
+				}
+
+				if(isFirstPage()){
+					showFirstPosts();
+				}
+				echo "<div class='row'><div class='col-sm-6 left'>";
+				showListWithPosts(isFirstPage());
+				echo "</div>";
+				echo "<div class='col-sm-6 right'>";
+				showListWithPosts(isFirstPage());
+				echo "</div></div>";
 			?>
 		</div>
 		<?php get_sidebar(); ?>
@@ -19,44 +31,51 @@
 <?php get_footer(); ?>
 
 <?php
-	function showSinglePost(){
-		the_post(); 
-		get_template_part( 'content-single-post', get_post_format() );
-	}
-
-	function showListWithPosts(){
-		$first = true;
-
+	function showFirstPosts(){
+		$i = 0;
 		while ( have_posts() )
 		{ 
-			if($first && isFirstPage()){
-				showBigPost();
+			if($i == 0)
+			{
+				showPost(false, $i);
 			} else {
-				showSmallPost();
+				skipPost();
 			}
-			$first = false;
+			$i++;
 		}  		
 	}
 
-	function showBigPost(){
-			echo "<div class='col-md-12'>";
+	function showListWithPosts($skipFirst){
+		$i = 0;
+		while ( have_posts() )
+		{ 
+			$even = !($i % 2 == 0);
+			if($i == 0 && $skipFirst)
+			{
+				skipPost();
+				$i++;
+				continue;
+			}
+			showPost($even, $i);
+			$i++;
+		}  		
+	}
+
+	function showPost($even, $i){
+			echo "<div class='". ($even ? 'even' : 'odd') ."'>";
 			
-			the_post();  	
+			the_post();
+			//echo $i;  	
 			get_template_part( 'content-card', get_post_format() );
 
 			echo "</div>";
 	}
 
-	function showSmallPost(){
-			echo "<div class='col-md-6'>";
-			
-			the_post();  	
-			get_template_part( 'content-card', get_post_format() );
-
-			echo "</div>";
-	}	
-
 	function isFirstPage(){
 		return is_home() && ((get_query_var('paged')) ? get_query_var('paged') : 0) == 0;
+	}
+
+	function skipPost(){
+		the_post();
 	}
 ?>
