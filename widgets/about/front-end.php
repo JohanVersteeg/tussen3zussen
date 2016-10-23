@@ -23,7 +23,7 @@
 
             foreach($socialMedia as $media){
                 if(!empty($instance[$media])){
-                    echo '<a href="'.$instance[$media].'">';
+                    echo '<a href="'.$instance[$media].'" target="_blank">';
                     echo '<i class="'.$media.' fa fa-'.$media.'" aria-hidden="true"></i>';
                     echo '</a>';
                 }
