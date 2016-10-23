@@ -29,7 +29,7 @@ $(function () {
 <body>
 	<header>
 	<div  class="container">
-		<img src="<?php bloginfo('template_directory');?>/images/logo-tranparent.png" style="width: 100%"/>
+		<img src="<?php bloginfo('template_directory');?>/images/logo-tranparent.png"  onclick="document.location.href = '<?php echo get_site_url() ?>'" style="width: 100%"/>
 	</div>
 	</header>
 	<div class="navbar navbar-default">
