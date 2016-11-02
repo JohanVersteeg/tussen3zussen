@@ -2,7 +2,7 @@
     <div class="blog-post" onclick="document.location.href = '<?php echo get_permalink() ?>';">
         <div class=read-more-placeholder>
             <div class="card-thumbnail">
-                <?php echo get_the_post_thumbnail(null); ?>  
+                <?php echo get_the_post_thumbnail(null,'medium'); ?>  
             </div>
             <div class="card-information">
                 <h2 class="title"><?php the_title(); ?></h2>
