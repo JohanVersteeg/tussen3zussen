@@ -1,12 +1,13 @@
-html, body{
-	padding: 0;
-	font-family: 'Dosis', sans-serif;
-
-	& when (@background-texture = true) {
-		background: url("../images/background.png");
-	}
+html,
+body {
+    padding: 0;
+    font-family: 'Dosis', sans-serif;
+    & when (@background-texture =true) {
+        background: url("../images/background.png");
+        background-size: 100%;
+    }
 }
 
 html.html {
-	margin-top: 0px !important;
+    margin-top: 0px !important;
 }

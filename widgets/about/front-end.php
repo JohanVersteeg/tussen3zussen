@@ -1,33 +1,32 @@
 <div class="about">
-    <?php 
-        echo get_avatar(get_the_author_meta( 'ID' ), 200); 
-    ?>
+
+<img src="<?php bloginfo('template_directory');?>/images/samen.png" />
+
     <h4>Welkom</h4>
     <p>
-    <?php 
-        the_author_meta( 'description' ); 
-    ?> 
+
+    Wij zijn drie zussen. In dit stukje kun je lezen dat we een blog hebben. Leuk he. Wil je weten wie ze zijn? lees hier meer over ons.
     </p>
 
     <div class='social-media'>
 
         <?php
-            $socialMedia = [
-                "youtube",
-                "snapchat",
-                "instagram",
-                "facebook",
-                "pinterest",
-                "twitter"        
-            ];
+$socialMedia = [
+    "youtube",
+    "snapchat",
+    "instagram",
+    "facebook",
+    "pinterest",
+    "twitter",
+];
 
-            foreach($socialMedia as $media){
-                if(!empty($instance[$media])){
-                    echo '<a href="'.$instance[$media].'" target="_blank">';
-                    echo '<i class="'.$media.' fa fa-'.$media.'" aria-hidden="true"></i>';
-                    echo '</a>';
-                }
-            }
-        ?>   
+foreach ($socialMedia as $media) {
+    if (!empty($instance[$media])) {
+        echo '<a href="' . $instance[$media] . '" target="_blank">';
+        echo '<i class="' . $media . ' fa fa-' . $media . '" aria-hidden="true"></i>';
+        echo '</a>';
+    }
+}
+?>
     </div>
 </div>

@@ -6534,6 +6534,7 @@ body {
   padding: 0;
   font-family: 'Dosis', sans-serif;
   background: url("../images/background.png");
+  background-size: 100%;
 }
 html.html {
   margin-top: 0px !important;
@@ -6556,31 +6557,38 @@ header img {
   padding: 0 60px;
   cursor: pointer;
 }
-.navbar.navbar-default {
-  background: white;
-  background-image: none;
-  border: none;
-  letter-spacing: 1px;
-  box-shadow: none;
-  font-weight: bold;
+.top-menu {
   text-align: center;
-  border-radius: 0;
-  -webkit-box-shadow: 0 0px 4px 0 rgba(0, 0, 0, 0.2);
-  -moz-box-shadow: 0 0px 4px 0 rgba(0, 0, 0, 0.2);
-  box-shadow: 0 0px 4px 0 rgba(0, 0, 0, 0.2);
+  margin-bottom: 10px;
+  margin-top: -20px;
 }
-.navbar.navbar-default .nav.navbar-nav {
-  display: inline-block;
-  float: none !important;
-  vertical-align: top;
-  margin: 5px 0;
-  font-size: 18px;
+.top-menu img:hover {
+  -moz-transform: scale(1.05);
+  -webkit-transform: scale(1.05);
+  transform: scale(1.05);
 }
-.navbar.navbar-default .nav.navbar-nav a {
-  padding: 10px 25px;
+.top-menu img {
+  height: 85px;
+  animation: 1s infinite ease-in-out;
 }
-.navbar.navbar-default .nav.navbar-nav a:hover {
-  background: #ffeff1;
+@keyframes shake {
+  10%,
+  90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  20%,
+  80% {
+    transform: translate3d(2px, 0, 0);
+  }
+  30%,
+  50%,
+  70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+  40%,
+  60% {
+    transform: translate3d(4px, 0, 0);
+  }
 }
 .social-media {
   color: gray;
@@ -6631,7 +6639,7 @@ header img {
   opacity: 0.8;
 }
 .sidebar-item {
-  border: solid 2px #f4f4f4;
+  border: solid 2px #d6d6d6;
   padding: 10px;
   margin-bottom: 20px;
   background: white;
@@ -6645,6 +6653,12 @@ header img {
 }
 .sidebar-item #searchsubmit {
   margin-top: 10px;
+}
+.sidebar-item h4 {
+  text-align: center;
+}
+.instagram .col-md-6 {
+  padding: 5px;
 }
 .single-item-page .col-sm-9 {
   border: solid 2px #f4f4f4;
@@ -6683,7 +6697,7 @@ header img {
 }
 .multiple-items-page .blog-post {
   padding: 0px;
-  border: solid 2px #f4f4f4;
+  border: solid 2px #d6d6d6;
   padding: 10px;
   margin-bottom: 20px;
   background-color: white;
@@ -6715,7 +6729,7 @@ header img {
   text-align: center;
 }
 .multiple-items-page .blog-post .card-information hr {
-  border-top: solid 2px #f4f4f4;
+  border-top: dashed 2px #e4e4e4;
 }
 .multiple-items-page .blog-post .card-information .text > * {
   text-align: justify !important;
