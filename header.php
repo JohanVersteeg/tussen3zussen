@@ -37,7 +37,7 @@ $(function () {
 		<div class="container top-menu">
 			<?php foreach (wp_get_nav_menu_items("Bovenste Menu") as $page) {?>
 
-				<a href="<?php echo $page->url ?>"><img src="<?php bloginfo('template_directory');?>/uploaded-images/<?php echo $page->title; ?>.png" /></a>
+				<a href="<?php echo $page->url ?>"><img src="<?php bloginfo('template_directory');?>/uploaded-images/<?php echo strtolower($page->title); ?>.png" /></a>
 
 			<?php }?>
 		</div>
