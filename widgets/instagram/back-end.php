@@ -5,11 +5,10 @@
     <?php
 $data = [
     "username",
-    "apikey",
 ];
 
 foreach ($data as $media) {
-    echo "<label for=' . $this->get_field_id( $media ) .'>" . _e(ucfirst($media . ' link') . ":") . "</label>";
+    echo "<label for=' . $this->get_field_id( $media ) .'>" . _e(ucfirst($media) . ":") . "</label>";
     echo "<input class='widefat' id='" . $this->get_field_id($media) . "' name='" . $this->get_field_name($media) . "' type='text' value='" . esc_attr($instance[$media]) . "' />";
 }
 ?>

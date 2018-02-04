@@ -6657,7 +6657,7 @@ header img {
 .sidebar-item h4 {
   text-align: center;
 }
-.instagram .col-md-6 {
+.instagram .col-xs-6 {
   padding: 5px;
 }
 .single-item-page .col-sm-9 {
@@ -6701,14 +6701,14 @@ header img {
   padding: 10px;
   margin-bottom: 20px;
   background-color: white;
+  transition: transform .1s;
 }
-.multiple-items-page .blog-post .read-more-placeholder:hover {
+.multiple-items-page .blog-post.read-more-placeholder:hover {
+  background-color: #fafafa;
+  /*transform: scale(1.02);*/
   cursor: pointer;
 }
-.multiple-items-page .blog-post .read-more-placeholder:hover .card-information .title {
-  text-decoration: underline;
-}
-.multiple-items-page .blog-post .read-more-placeholder:hover .lees-meer {
+.multiple-items-page .blog-post.read-more-placeholder:hover .lees-meer {
   opacity: 1;
 }
 .multiple-items-page .blog-post .card-thumbnail img {
@@ -6722,11 +6722,11 @@ header img {
 .multiple-items-page .blog-post .card-information .title {
   margin-top: 3px;
   font-size: 23px;
-  text-align: center;
+  text-align: left;
 }
 .multiple-items-page .blog-post .card-information .date {
   font-size: 16px;
-  text-align: center;
+  text-align: left;
 }
 .multiple-items-page .blog-post .card-information hr {
   border-top: dashed 2px #e4e4e4;
@@ -6737,6 +6737,26 @@ header img {
 .multiple-items-page .blog-post .card-information .text img,
 .multiple-items-page .blog-post .card-information .text .separator {
   display: none;
+}
+.multiple-items-page .blog-post .card-information .author {
+  margin-top: 20px;
+  float: right;
+}
+.multiple-items-page .blog-post .card-information .author .name {
+  margin-right: -20px;
+  font-weight: 500;
+  /*border: dashed 2px #d6d6d6;*/
+  border-radius: 15px;
+  padding: 3px 20px 3px 10px;
+}
+.multiple-items-page .blog-post .card-information .author img {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  /*border: dashed 2px #d6d6d6;
+                    background: white;*/
+  padding: 5px;
+  margin-top: -1px;
 }
 .multiple-items-page .blog-post .lees-meer {
   opacity: 0.8;
@@ -6751,22 +6771,14 @@ header img {
   margin-top: -10px;
 }
 .instagram-photos {
-  background: white;
-  padding: 10px 0px;
-  -webkit-box-shadow: 0 -1px 6px -6px rgba(0, 0, 0, 0.1);
-  -moz-box-shadow: 0 -1px 6px -6px rgba(0, 0, 0, 0.1);
-  box-shadow: 0 -1px 6px 0 rgba(0, 0, 0, 0.1);
+  padding: 0 !important;
+  margin: -5px;
+  margin-top: 15px;
 }
-.instagram-photos .row {
-  padding: 10px 60px;
-  border-top: 10px dotted #e4e4e4;
-  border-bottom: 10px dotted #e4e4e4;
-  margin: 0;
-  position: relative;
-}
-.instagram-photos .col-sm-2 {
-  padding-left: 3px;
-  padding-right: 3px;
+.instagram-photos .col-xs-6 {
+  padding-left: 5px !important;
+  padding-right: 5px !important;
+  margin-bottom: 10px;
 }
 .instagram-photos img {
   width: 100%;
@@ -6797,11 +6809,11 @@ header img {
   position: absolute;
   height: 100%;
   top: 0;
-  right: 3px;
-  left: 3px;
-  -webkit-box-shadow: inset 0px 0px 70px 0px rgba(0, 0, 0, 0.15);
-  -moz-box-shadow: inset 0px 0px 70px 0px rgba(0, 0, 0, 0.15);
-  box-shadow: inset 0px 0px 70px 0px rgba(0, 0, 0, 0.15);
+  right: 0;
+  left: 0;
+  -webkit-box-shadow: inset 0px 0px 70px 0px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: inset 0px 0px 70px 0px rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0px 0px 70px 0px rgba(0, 0, 0, 0.1);
   cursor: pointer;
   text-align: center;
   vertical-align: middle;
@@ -6813,20 +6825,10 @@ header img {
   margin-top: 50%;
   position: relative;
   top: -10px;
-  font-size: 12px;
+  font-size: 14px;
 }
 .instagram-photos .shadow .media-information .likes {
   margin-right: 10px;
-}
-@media (min-width: 992px) {
-  .instagram-photos .shadow .media-information .likes {
-    margin-right: 30px;
-  }
-}
-@media (min-width: 992px) {
-  .instagram-photos .shadow .media-information {
-    font-size: 20px;
-  }
 }
 .instagram-photos .shadow .media-information .comments,
 .instagram-photos .shadow .media-information .likes {

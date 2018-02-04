@@ -5,7 +5,6 @@ class wpinsta_widget extends WP_Widget
     private $domain = "wpinsta_widget_domain";
     private $data = [
         "username",
-        "apikey",
     ];
 
     public function __construct()
