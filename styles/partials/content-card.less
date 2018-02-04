@@ -1,107 +1,87 @@
 .multiple-items-page {
-
-    @media only screen and (min-width : 768px) {
+    @media only screen and (min-width: 768px) {
         &.first-post-big {
             .left {
-                .odd{
+                .odd {
                     display: none;
                 }
             }
-
-            .right{
+            .right {
                 .even {
                     display: none;
                 }
             }
         }
-
         &.first-post-not-big {
             .left {
-                .even{
+                .even {
                     display: none;
                 }
             }
-
-            .right{
+            .right {
                 .odd {
                     display: none;
                 }
             }
         }
     }
-
-    @media only screen and (max-width : 768px) {
+    @media only screen and (max-width: 768px) {
         .right {
             display: none;
         }
     }
-    .col-sm-9 {
-        //padding:0;
-    }
-
-    .blog-post {       
+    .blog-post {
         padding: 0px;
-        border: solid 2px #f4f4f4;
+        border: solid 2px #d6d6d6;
         padding: 10px;
-        margin-bottom: 20px;    
+        margin-bottom: 20px;
         background-color: white;
-
         .read-more-placeholder:hover {
             cursor: pointer;
- 
             .card-information .title {
                 text-decoration: underline;
             }
-
-            .lees-meer{
+            .lees-meer {
                 opacity: 1;
             }
         }
-
         .card-thumbnail img {
-            width:100%;
+            width: 100%;
             height: auto;
         }
-
-        .card-information{
-            padding:5px 5px 0 5px;
-            font-size:15px;
-            
+        .card-information {
+            padding: 5px 5px 0 5px;
+            font-size: 15px;
             .title {
                 margin-top: 3px;
                 font-size: 23px;
                 text-align: center;
             }
-
-            .date {    
+            .date {
                 font-size: 16px;
                 text-align: center;
             }
-
-            hr{
-                border-top: solid 2px #f4f4f4;
+            hr {
+                border-top: dashed 2px #e4e4e4;
             }
-            
-            .text > * {
-                text-align:justify !important;
+            .text>* {
+                text-align: justify !important;
             }
-            .text img, .text .separator{
-                display:none;
+            .text img,
+            .text .separator {
+                display: none;
             }
         }
-
         .lees-meer {
             opacity: 0.8;
-            margin-top:10px;
+            margin-top: 10px;
             margin-bottom: -10px;
             text-align: center;
-            
-            img{
-                height:50px;
+            img {
+                height: 50px;
             }
         }
-
-        .social-media{
+        .social-media {
             margin-top: -10px;
         }
     }
