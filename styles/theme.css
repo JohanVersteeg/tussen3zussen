@@ -6639,7 +6639,7 @@ header img {
   opacity: 0.8;
 }
 .sidebar-item {
-  border: solid 2px #d6d6d6;
+  border: solid 1px #d6d6d6;
   padding: 10px;
   margin-bottom: 20px;
   background: white;
@@ -6659,6 +6659,11 @@ header img {
 }
 .instagram .col-xs-6 {
   padding: 5px;
+}
+.sidebar-item .read-more {
+  height: 50px !important;
+  width: auto !important;
+  margin-bottom: 5px;
 }
 .single-item-page .col-sm-9 {
   border: solid 2px #f4f4f4;
@@ -6697,7 +6702,7 @@ header img {
 }
 .multiple-items-page .blog-post {
   padding: 0px;
-  border: solid 2px #d6d6d6;
+  border: solid 1px #d6d6d6;
   padding: 10px;
   margin-bottom: 20px;
   background-color: white;
@@ -6739,23 +6744,21 @@ header img {
   display: none;
 }
 .multiple-items-page .blog-post .card-information .author {
-  margin-top: 20px;
+  margin-top: 3px;
+  width: 50px;
+  text-align: center;
   float: right;
 }
 .multiple-items-page .blog-post .card-information .author .name {
-  margin-right: -20px;
+  display: block;
   font-weight: 500;
-  /*border: dashed 2px #d6d6d6;*/
   border-radius: 15px;
-  padding: 3px 20px 3px 10px;
 }
 .multiple-items-page .blog-post .card-information .author img {
   border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  /*border: dashed 2px #d6d6d6;
-                    background: white;*/
-  padding: 5px;
+  border: 2px dashed #e4e4e4;
+  width: 50px;
+  padding: 2px;
   margin-top: -1px;
 }
 .multiple-items-page .blog-post .lees-meer {

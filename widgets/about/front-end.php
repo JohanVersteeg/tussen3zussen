@@ -4,10 +4,11 @@
 
     <h4>Welkom</h4>
     <p>
-
     Wij zijn drie zussen. In dit stukje kun je lezen dat we een blog hebben. Leuk he. Wil je weten wie ze zijn? lees hier meer over ons.
     </p>
-
+<div class="text-center">
+    <a><img src="<?php bloginfo('template_directory');?>/images/lees-meer.png" class="read-more"/></a>
+</div>
     <div class='social-media'>
 
         <?php

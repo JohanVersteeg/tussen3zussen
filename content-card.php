@@ -6,7 +6,8 @@
             </div>
             <div class="card-information">
                 <div class="author">
-                    <span class="name">Door: Hanneke</span> <img src="<?php bloginfo('template_directory');?>/images/users/hanneke.png" />
+                     <img src="<?php bloginfo('template_directory');?>/images/users/<?php the_author();?>.png" />
+                     <span class="name"><?php the_author();?></span>
                 </div>
                 <h2 class="title"><?php the_title();?></h2>
                 <p class="date"><?php the_date();?></p>
