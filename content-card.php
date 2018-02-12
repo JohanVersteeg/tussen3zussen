@@ -6,7 +6,7 @@
             </div>
             <div class="card-information">
                 <div class="author">
-                     <img src="<?php bloginfo('template_directory');?>/images/users/<?php the_author();?>.png" />
+                     <img src="<?php bloginfo('template_directory');?>/images/users/<?php strtolower(the_author());?>.png" />
                      <span class="name"><?php the_author();?></span>
                 </div>
                 <h2 class="title"><?php the_title();?></h2>
