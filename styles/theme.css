@@ -6670,6 +6670,11 @@ header img {
   width: auto !important;
   margin-bottom: 5px;
 }
+@media (max-width: 992px) {
+  .sidebar-item .read-more {
+    height: 43px !important;
+  }
+}
 .single-item-page .col-sm-9 {
   border: solid 2px #f4f4f4;
   margin-bottom: 10px;
