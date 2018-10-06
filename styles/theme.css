@@ -6533,6 +6533,7 @@ html,
 body {
   padding: 0;
   font-family: 'Dosis', sans-serif;
+  font-size: 15px;
   background: url("../images/background.png");
   background-size: 100%;
 }
@@ -6674,6 +6675,15 @@ header img {
   .sidebar-item .read-more {
     height: 43px !important;
   }
+}
+.blsdk-follow {
+  display: none;
+}
+.bloglovin-widget-follow-btn {
+  opacity: 0.3;
+}
+.bloglovin-widget-follow-btn:hover {
+  opacity: 0.4;
 }
 .single-item-page .col-sm-9 {
   border: solid 2px #f4f4f4;

@@ -29,5 +29,6 @@ foreach ($socialMedia as $media) {
     }
 }
 ?>
+<p><br><a class="blsdk-follow" href="https://www.bloglovin.com/blogs/tussen-3-zussen-19621395" target="_blank" data-blsdk-type="button" data-blsdk-counter="false">Follow</a><script>(function(d, s, id) {var js, fjs = d.getElementsByTagName(s)[0];if (d.getElementById(id)) return;js = d.createElement(s);js.id = id;js.src = "https://www.bloglovin.com/widget/js/loader.js?v=1";fjs.parentNode.insertBefore(js, fjs);}(document, "script", "bloglovin-sdk"))</script></p>
     </div>
 </div>
