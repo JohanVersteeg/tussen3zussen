@@ -1,4 +1,5 @@
 <?php
+//header('Content-Type: application/json');
 $profile_url = "https://www.instagram.com/" . $_GET['username'];
 $html = file_get_contents($profile_url);
 
@@ -8,23 +9,25 @@ $start = strpos($html, $startText) + strlen($startText);
 $end = strpos($html, ";</script>", $start);
 
 $json = json_decode(substr($html, $start, $end - $start));
+//echo json_encode($json->entry_data->ProfilePage[0]->graphql->user->edge_owner_to_timeline_media->edges);
+//die;
 
 for ($i = 0; $i < 6; $i++) {
-    $mediaItem = $json->entry_data->ProfilePage[0]->user->media->nodes[$i];
+    $mediaItem = $json->entry_data->ProfilePage[0]->graphql->user->edge_owner_to_timeline_media->edges[$i]->node;
     ?>
 
 <div class="col-xs-6">
     <div style='position: relative; overflow: hidden;'>
-    <img src="<?php echo $mediaItem->thumbnail_src ?>" />
-    <div class="shadow" onclick="document.location.href = '<?php echo "https://www.instagram.com/p/" . $mediaItem->code; ?>';">
+    <img src="<?php echo $mediaItem->thumbnail_resources[0]->src ?>" />
+    <div class="shadow" onclick="document.location.href = '<?php echo "https://www.instagram.com/p/" . $mediaItem->shortcode; ?>';">
         <span class="media-information">
             <span class="likes">
                 <i class="fa fa-heart" aria-hidden="true"></i>
-                <span class="number"> <?php echo $mediaItem->likes->count; ?> </span>
+                <span class="number"> <?php echo $mediaItem->edge_liked_by->count; ?> </span>
             </span>
             <span class="comments">
                 <i class="fa fa-comment" aria-hidden="true"></i>
-                <span class="number"> <?php echo $mediaItem->comments->count; ?> </span>
+                <span class="number"> <?php echo $mediaItem->edge_media_to_comment->count; ?> </span>
             </span>
         </span>
         </div></div>
