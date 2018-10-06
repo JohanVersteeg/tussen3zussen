@@ -6780,6 +6780,11 @@ header img {
 .multiple-items-page .blog-post .lees-meer img {
   height: 50px;
 }
+@media (max-width: 992px) {
+  .multiple-items-page .blog-post .lees-meer img {
+    height: 43px !important;
+  }
+}
 .multiple-items-page .blog-post .social-media {
   margin-top: -10px;
 }
