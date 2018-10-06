@@ -35,11 +35,13 @@ $(function () {
 
 
 		<div class="container top-menu">
+		<div class="col-lg-12 col-lg-offset-0 col-md-10 col-md-offset-1 col-sm-12 col-sm-offset-0">
 			<?php foreach (wp_get_nav_menu_items("Bovenste Menu") as $page) {?>
 
 				<a href="<?php echo $page->url ?>"><img src="<?php bloginfo('template_directory');?>/uploaded-images/<?php echo strtolower($page->title); ?>.png" /></a>
 
 			<?php }?>
+			</div>
 		</div>
 
 

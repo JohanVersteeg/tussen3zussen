@@ -6571,6 +6571,11 @@ header img {
   height: 70px;
   animation: 1s infinite ease-in-out;
 }
+@media (max-width: 992px) {
+  .top-menu img {
+    height: 43px !important;
+  }
+}
 @keyframes shake {
   10%,
   90% {
